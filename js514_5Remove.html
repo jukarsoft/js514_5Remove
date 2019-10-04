@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+		<meta lang="es">
+		<meta name="description" content="Resumen del contenido"> 
+		<meta name="description" content="Free Web tutorials">
+  		<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  		<meta name="author" content="Juan Carlos">
+	<title>buscar y borrar nodos -  removeChild</title>
+	<style type="text/css">
+		div {
+			background-color: yellow;
+			width: 200px;
+			height: 50px;
+			text-align: center;
+		}
+	</style>
+	<!-- libreria JQuery-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		function borraDiv() {
+			//hay que situarse en el padre de lo que queremos borrar
+			//objeteo a borrar
+			var parent= document.getElementById('capa')
+			//borrar elemento a partir del padre
+			this.parentNode.removeChild(parent);
+		}
+	</script>
+</head>
+<body>
+	<main>
+		<div class="capa">
+			<a href='#' onclick="borraDiv(this)">Pulsa en este enlace</a>
+		</div>
+		<div class="capa">
+			<a href='#' onclick="borraDiv(this)">Pulsa en este enlace</a>
+		</div>
+		<div class="capa">
+			<a href='#' onclick="borraDiv(this)">Pulsa en este enlace</a>
+		</div>
+	</main>
+
+</body>
+</html>
